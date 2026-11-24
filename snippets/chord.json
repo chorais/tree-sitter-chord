@@ -1,0 +1,221 @@
+{
+  "Persona declaration": {
+    "prefix": "persona",
+    "body": [
+      "persona > ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Top-level persona declaration"
+  },
+  "Persona cognition": {
+    "prefix": "cognition",
+    "body": [
+      "persona > cognition ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standalone persona cognition declaration"
+  },
+  "Persona config": {
+    "prefix": "pconfig",
+    "body": [
+      "persona > config ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standalone persona config declaration"
+  },
+  "Cluster cognition": {
+    "prefix": "clucog",
+    "body": [
+      "cluster > cognition ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standalone cluster cognition declaration"
+  },
+  "Cluster config": {
+    "prefix": "cluconfig",
+    "body": [
+      "cluster > config ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standalone cluster config declaration"
+  },
+  "Chorus declaration": {
+    "prefix": "chorus",
+    "body": [
+      "chorus > ${1:name}@${2:1.0} {",
+      "\tuses {",
+      "\t\tpersona ${3:researcher}@${4:1.0} as ${5:researcher}",
+      "\t}",
+      "\t$0",
+      "}"
+    ],
+    "description": "Chorus declaration with a uses block"
+  },
+  "Scena declaration": {
+    "prefix": "scena",
+    "body": [
+      "scena > ${1:name}@${2:1.0} {",
+      "\tuses {",
+      "\t\tchorus ${3:flow}@${4:1.0} as ${5:flow}",
+      "\t}",
+      "\tentry_stage: ${6:Gather}",
+      "",
+      "\tstage ${6:Gather} {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Scena declaration with uses and an entry stage"
+  },
+  "Stage declaration": {
+    "prefix": "stage",
+    "body": [
+      "stage ${1:name} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Scena stage declaration"
+  },
+  "Assembly declaration": {
+    "prefix": "assembly",
+    "body": [
+      "assembly ${1:name}@${2:1.0} {",
+      "\tuses {",
+      "\t\tchorus ${3:flow}@${4:1.0} as ${5:flow}",
+      "\t}",
+      "\tnodes {",
+      "\t\tnode ${6:node} using ${7:persona.researcher@1.0} {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Assembly declaration with uses and nodes"
+  },
+  "Node declaration": {
+    "prefix": "node",
+    "body": [
+      "node ${1:name} using ${2:persona.researcher@1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Assembly node declaration"
+  },
+  "Expansion declaration": {
+    "prefix": "expansion",
+    "body": [
+      "expansion > ${1:general} ${2:name}@${3:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Expansion declaration (providers, memory, safety, cognition, persona, cluster, assembly, composition, general)"
+  },
+  "Profile declaration": {
+    "prefix": "profile",
+    "body": [
+      "profile ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Profile declaration"
+  },
+  "Posture declaration": {
+    "prefix": "posture",
+    "body": [
+      "posture ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Posture declaration"
+  },
+  "Persona override entry": {
+    "prefix": "override",
+    "body": [
+      "override ${1:base}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Persona overrides entry"
+  },
+  "Capability declaration": {
+    "prefix": "capability",
+    "body": [
+      "capability ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Capability declaration"
+  },
+  "Provider declaration": {
+    "prefix": "provider",
+    "body": [
+      "provider ${1:name}@${2:1.0} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Provider declaration"
+  },
+  "Use persona entry": {
+    "prefix": "usep",
+    "body": [
+      "persona ${1:name}@${2:1.0} as ${3:alias}"
+    ],
+    "description": "uses block entry binding a persona to an alias"
+  },
+  "Use cluster entry": {
+    "prefix": "usec",
+    "body": [
+      "cluster ${1:name}@${2:1.0} as ${3:alias}"
+    ],
+    "description": "uses block entry binding a cluster to an alias"
+  },
+  "Use profile reference": {
+    "prefix": "useprofile",
+    "body": [
+      "use profile \"${1:name}\""
+    ],
+    "description": "Reference a profile by key"
+  },
+  "Invocation statement": {
+    "prefix": "invoc",
+    "body": [
+      "persona ${1:Researcher} (${2:topic: \"{{inputs.topic}}\"})$0"
+    ],
+    "description": "Stage invocation of an aliased persona with args"
+  },
+  "Transition goto": {
+    "prefix": "goto",
+    "body": [
+      "goto ${1:stage}"
+    ],
+    "description": "Unconditional stage transition"
+  },
+  "Transition when": {
+    "prefix": "when",
+    "body": [
+      "when ${1:value} -> ${2:stage}"
+    ],
+    "description": "Conditional stage transition on a value"
+  },
+  "Transition on error": {
+    "prefix": "onerror",
+    "body": [
+      "on_error ${1:stage}"
+    ],
+    "description": "Stage transition on error"
+  },
+  "Heredoc": {
+    "prefix": "heredoc",
+    "body": [
+      "<<EOF",
+      "$1",
+      "EOF"
+    ],
+    "description": "Heredoc literal with EOF terminator"
+  }
+}

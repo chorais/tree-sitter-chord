@@ -6,6 +6,8 @@ authors = ["figurativelycthulhu"]
 description = "Syntax highlighting for Chord, the Chorais description language for AI orchestration"
 repository = "https://github.com/chorais/chorais"
 
+snippets = ["./snippets/chord.json"]
+
 [grammars.chord]
 repository = "file:///Users/calum.shaw-mackay/dev/tree-sitter-chord"
 rev = "main"
