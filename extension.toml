@@ -10,5 +10,5 @@ snippets = ["./snippets/chord.json"]
 
 [grammars.chord]
 repository = "https://github.com/chorais/tree-sitter-chord"
-rev = "main"
+rev = "db3e1be55a97db0f99dbc051e93f601770d6e3be"
 path = "."
