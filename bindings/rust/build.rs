@@ -1,5 +1,6 @@
 fn main() {
-    let src_dir = std::path::Path::new("src");
+    // The grammar sources live at the repo root; this crate is nested under bindings/rust/.
+    let src_dir = std::path::Path::new("../../src");
 
     let mut c_config = cc::Build::new();
     c_config.std("c11").include(src_dir);
@@ -9,7 +10,9 @@ fn main() {
 
     if std::env::var("TARGET").unwrap() == "wasm32-unknown-unknown" {
         let Ok(wasm_headers) = std::env::var("DEP_TREE_SITTER_LANGUAGE_WASM_HEADERS") else {
-            panic!("Environment variable DEP_TREE_SITTER_LANGUAGE_WASM_HEADERS must be set by the language crate");
+            panic!(
+                "Environment variable DEP_TREE_SITTER_LANGUAGE_WASM_HEADERS must be set by the language crate"
+            );
         };
 
         c_config.include(&wasm_headers);
@@ -28,19 +31,20 @@ fn main() {
     c_config.compile("tree-sitter-chord");
 
     println!("cargo:rustc-check-cfg=cfg(with_highlights_query)");
-    if !"queries/highlights.scm".is_empty() && std::path::Path::new("queries/highlights.scm").exists() {
+    let queries_dir = std::path::Path::new("../../queries");
+    if queries_dir.join("highlights.scm").exists() {
         println!("cargo:rustc-cfg=with_highlights_query");
     }
     println!("cargo:rustc-check-cfg=cfg(with_injections_query)");
-    if !"queries/injections.scm".is_empty() && std::path::Path::new("queries/injections.scm").exists() {
+    if queries_dir.join("injections.scm").exists() {
         println!("cargo:rustc-cfg=with_injections_query");
     }
     println!("cargo:rustc-check-cfg=cfg(with_locals_query)");
-    if !"queries/locals.scm".is_empty() && std::path::Path::new("queries/locals.scm").exists() {
+    if queries_dir.join("locals.scm").exists() {
         println!("cargo:rustc-cfg=with_locals_query");
     }
     println!("cargo:rustc-check-cfg=cfg(with_tags_query)");
-    if !"queries/tags.scm".is_empty() && std::path::Path::new("queries/tags.scm").exists() {
+    if queries_dir.join("tags.scm").exists() {
         println!("cargo:rustc-cfg=with_tags_query");
     }
 }

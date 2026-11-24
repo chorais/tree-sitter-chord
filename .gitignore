@@ -1,5 +1,6 @@
 # Rust artifacts
 target/
+Cargo.lock
 
 # Node artifacts
 build/
@@ -46,3 +47,6 @@ zig-out/
 *.tgz
 *.zip
 *.jar
+
+# Zed dev-extension grammar checkout artifacts
+/grammars/

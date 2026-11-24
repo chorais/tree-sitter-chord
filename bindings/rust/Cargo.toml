@@ -7,15 +7,17 @@ edition = "2024"
 keywords = [ "incremental", "parsing", "tree-sitter", "chord" ]
 license = "MIT"
 name = "tree-sitter-chord"
-readme = "README.md"
 repository = "https://github.com/chorais/chorais"
 version = "0.1.0"
 
-build = "bindings/rust/build.rs"
-include = [ "bindings/rust/*", "grammar.js", "queries/*", "src/*", "tree-sitter.json", "/LICENSE" ]
+# Kept as a self-contained crate under bindings/rust/ rather than at the repo
+# root: Zed's dev-extension install treats any Cargo.toml at the extension root
+# as a Rust WASM extension and fails to build it.
+
+build = "build.rs"
 
 [lib]
-path = "bindings/rust/lib.rs"
+path = "lib.rs"
 
 [dependencies]
 tree-sitter-language = "0.1"
