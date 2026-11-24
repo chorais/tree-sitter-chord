@@ -1,0 +1,2084 @@
+[
+  {
+    "type": "assembly_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assembly_graph_field",
+          "named": true
+        },
+        {
+          "type": "assembly_nodes_field",
+          "named": true
+        },
+        {
+          "type": "assembly_overrides_field",
+          "named": true
+        },
+        {
+          "type": "assembly_uses_field",
+          "named": true
+        },
+        {
+          "type": "map_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assembly_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assembly_body",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assembly_graph_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "graph_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assembly_nodes_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "nodes_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assembly_overrides_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "overrides_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assembly_uses_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "uses_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "boolean_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "capability_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "chorus_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "chorus_uses_field",
+          "named": true
+        },
+        {
+          "type": "map_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "chorus_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "chorus_body",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "chorus_uses_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "uses_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cluster_cognition_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cluster_config_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "edge_endpoint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_with_version",
+          "named": true
+        },
+        {
+          "type": "reference_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expansion_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "expansion_uses_field",
+          "named": true
+        },
+        {
+          "type": "map_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expansion_category",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "expansion_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expansion_body",
+          "named": true
+        },
+        {
+          "type": "expansion_category",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expansion_use_entry",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expansion_category",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expansion_uses_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "expansion_use_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expansion_uses_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expansion_uses_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "graph_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "graph_edge",
+          "named": true
+        },
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "node_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "graph_edge",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "edge_endpoint",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "map_entry",
+    "named": true,
+    "fields": {
+      "from": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "reference_part",
+            "named": true
+          }
+        ]
+      },
+      "key": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "reference_part",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "reference",
+            "named": true
+          }
+        ]
+      },
+      "to": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "reference_part",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "value",
+            "named": true
+          }
+        ]
+      },
+      "via": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "reference_part",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "map_key",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "map_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name_with_version",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "version": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "version",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "node_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_decl",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name_with_version",
+          "named": true
+        },
+        {
+          "type": "node_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nodes_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "node_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "override_entry",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_value",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "overrides_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "override_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "persona_overrides_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_cognition_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_config_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name_with_version",
+          "named": true
+        },
+        {
+          "type": "persona_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_override_entry",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name_with_version",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "map_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_overrides_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "persona_override_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "persona_overrides_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "persona_overrides_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "posture_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "primitive_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "profile_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provider_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "reference_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reference_part",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "map_key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reference_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_aggregate_qualifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scena_as_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "scena_as_body",
+          "named": true
+        },
+        {
+          "type": "scena_type_anchor",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_as_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "scena_invocation_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_barrier_qualifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "scena_stage_decl",
+          "named": true
+        },
+        {
+          "type": "scena_uses_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name_with_version",
+          "named": true
+        },
+        {
+          "type": "scena_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_deterministic_qualifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scena_invocation_arg",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "reference_part",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "scena_invocation_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "scena_invocation_arg",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_invocation_edge_stmt",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "scena_invocation_stmt",
+    "named": true,
+    "fields": {
+      "anchor": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "scena_type_anchor",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "scena_invocation_args",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_parallel_qualifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "scena_strategy_qualifier",
+          "named": true
+        },
+        {
+          "type": "timeout_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_stage_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "scena_stage_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_stage_decl",
+    "named": true,
+    "fields": {
+      "anchor": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "scena_type_anchor",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "scena_stage_body",
+          "named": true
+        },
+        {
+          "type": "scena_stage_governance",
+          "named": true
+        },
+        {
+          "type": "scena_stage_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_stage_governance",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_stage_item",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "scena_as_block",
+          "named": true
+        },
+        {
+          "type": "scena_invocation_edge_stmt",
+          "named": true
+        },
+        {
+          "type": "scena_invocation_stmt",
+          "named": true
+        },
+        {
+          "type": "scena_transition_stmt",
+          "named": true
+        },
+        {
+          "type": "scena_with_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_stage_qualifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "scena_aggregate_qualifier",
+          "named": true
+        },
+        {
+          "type": "scena_barrier_qualifier",
+          "named": true
+        },
+        {
+          "type": "scena_deterministic_qualifier",
+          "named": true
+        },
+        {
+          "type": "scena_parallel_qualifier",
+          "named": true
+        },
+        {
+          "type": "scena_wait_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_strategy_qualifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_transition_stmt",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "scena_type_anchor",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scena_uses_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "uses_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_wait_qualifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_with_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "scena_with_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scena_with_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "scena_invocation_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "top_level_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "test_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "map_entry",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "timeout_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "duration",
+          "named": true
+        },
+        {
+          "type": "timeout_mode",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "timeout_mode",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "top_level_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "assembly_decl",
+          "named": true
+        },
+        {
+          "type": "capability_decl",
+          "named": true
+        },
+        {
+          "type": "chorus_decl",
+          "named": true
+        },
+        {
+          "type": "cluster_cognition_decl",
+          "named": true
+        },
+        {
+          "type": "cluster_config_decl",
+          "named": true
+        },
+        {
+          "type": "expansion_decl",
+          "named": true
+        },
+        {
+          "type": "persona_cognition_decl",
+          "named": true
+        },
+        {
+          "type": "persona_config_decl",
+          "named": true
+        },
+        {
+          "type": "persona_decl",
+          "named": true
+        },
+        {
+          "type": "posture_decl",
+          "named": true
+        },
+        {
+          "type": "profile_decl",
+          "named": true
+        },
+        {
+          "type": "provider_decl",
+          "named": true
+        },
+        {
+          "type": "scena_decl",
+          "named": true
+        },
+        {
+          "type": "test_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "uses_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "uses_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "uses_entry",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_with_version",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "heredoc",
+          "named": true
+        },
+        {
+          "type": "map_value",
+          "named": true
+        },
+        {
+          "type": "name_with_version",
+          "named": true
+        },
+        {
+          "type": "primitive_value",
+          "named": true
+        },
+        {
+          "type": "reference_value",
+          "named": true
+        },
+        {
+          "type": "value_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "value_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "version",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "aggregate",
+    "named": false
+  },
+  {
+    "type": "aggregation_modes",
+    "named": false
+  },
+  {
+    "type": "all",
+    "named": false
+  },
+  {
+    "type": "allow",
+    "named": false
+  },
+  {
+    "type": "args",
+    "named": false
+  },
+  {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "assemblies",
+    "named": false
+  },
+  {
+    "type": "assembly",
+    "named": false
+  },
+  {
+    "type": "authority_model",
+    "named": false
+  },
+  {
+    "type": "barrier",
+    "named": false
+  },
+  {
+    "type": "behavioral",
+    "named": false
+  },
+  {
+    "type": "behaviour_modes",
+    "named": false
+  },
+  {
+    "type": "block_comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "capabilities",
+    "named": false
+  },
+  {
+    "type": "capability",
+    "named": false
+  },
+  {
+    "type": "chorus",
+    "named": false
+  },
+  {
+    "type": "cluster",
+    "named": false
+  },
+  {
+    "type": "cognition",
+    "named": false
+  },
+  {
+    "type": "cognitive_priorities",
+    "named": false
+  },
+  {
+    "type": "compatibility",
+    "named": false
+  },
+  {
+    "type": "composability",
+    "named": false
+  },
+  {
+    "type": "composition",
+    "named": false
+  },
+  {
+    "type": "config",
+    "named": false
+  },
+  {
+    "type": "consensus_behaviour",
+    "named": false
+  },
+  {
+    "type": "continue",
+    "named": false
+  },
+  {
+    "type": "custom",
+    "named": false
+  },
+  {
+    "type": "defaults",
+    "named": false
+  },
+  {
+    "type": "deny",
+    "named": false
+  },
+  {
+    "type": "description",
+    "named": false
+  },
+  {
+    "type": "deterministic",
+    "named": false
+  },
+  {
+    "type": "duration",
+    "named": true
+  },
+  {
+    "type": "epistemic_operations",
+    "named": false
+  },
+  {
+    "type": "ethics",
+    "named": false
+  },
+  {
+    "type": "execution",
+    "named": false
+  },
+  {
+    "type": "expansion",
+    "named": false
+  },
+  {
+    "type": "extends",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "forbids",
+    "named": false
+  },
+  {
+    "type": "forensics",
+    "named": false
+  },
+  {
+    "type": "freeze",
+    "named": false
+  },
+  {
+    "type": "general",
+    "named": false
+  },
+  {
+    "type": "goto",
+    "named": false
+  },
+  {
+    "type": "governance",
+    "named": false
+  },
+  {
+    "type": "governance_boundaries",
+    "named": false
+  },
+  {
+    "type": "graph",
+    "named": false
+  },
+  {
+    "type": "heredoc",
+    "named": true
+  },
+  {
+    "type": "hooks",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "identity",
+    "named": false
+  },
+  {
+    "type": "imports",
+    "named": false
+  },
+  {
+    "type": "ingress",
+    "named": false
+  },
+  {
+    "type": "inheritance",
+    "named": false
+  },
+  {
+    "type": "inheritance_rules",
+    "named": false
+  },
+  {
+    "type": "inputs",
+    "named": false
+  },
+  {
+    "type": "interaction_rights",
+    "named": false
+  },
+  {
+    "type": "invocation",
+    "named": false
+  },
+  {
+    "type": "io_multiplicity",
+    "named": false
+  },
+  {
+    "type": "io_schema",
+    "named": false
+  },
+  {
+    "type": "latest",
+    "named": false
+  },
+  {
+    "type": "lifecycle",
+    "named": false
+  },
+  {
+    "type": "line_comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "memory",
+    "named": false
+  },
+  {
+    "type": "metadata",
+    "named": false
+  },
+  {
+    "type": "metadata_propagation",
+    "named": false
+  },
+  {
+    "type": "metadata_requirements",
+    "named": false
+  },
+  {
+    "type": "models",
+    "named": false
+  },
+  {
+    "type": "node",
+    "named": false
+  },
+  {
+    "type": "nodes",
+    "named": false
+  },
+  {
+    "type": "null_literal",
+    "named": true
+  },
+  {
+    "type": "number_literal",
+    "named": true
+  },
+  {
+    "type": "on_error",
+    "named": false
+  },
+  {
+    "type": "output",
+    "named": false
+  },
+  {
+    "type": "outputs",
+    "named": false
+  },
+  {
+    "type": "override",
+    "named": false
+  },
+  {
+    "type": "overrides",
+    "named": false
+  },
+  {
+    "type": "parallel",
+    "named": false
+  },
+  {
+    "type": "partial",
+    "named": false
+  },
+  {
+    "type": "persona",
+    "named": false
+  },
+  {
+    "type": "phases",
+    "named": false
+  },
+  {
+    "type": "posture",
+    "named": false
+  },
+  {
+    "type": "profile",
+    "named": false
+  },
+  {
+    "type": "provider",
+    "named": false
+  },
+  {
+    "type": "providers",
+    "named": false
+  },
+  {
+    "type": "quantitative_capabilities",
+    "named": false
+  },
+  {
+    "type": "reasoning_modality",
+    "named": false
+  },
+  {
+    "type": "registry",
+    "named": false
+  },
+  {
+    "type": "requires",
+    "named": false
+  },
+  {
+    "type": "resources",
+    "named": false
+  },
+  {
+    "type": "return",
+    "named": false
+  },
+  {
+    "type": "routing",
+    "named": false
+  },
+  {
+    "type": "run",
+    "named": false
+  },
+  {
+    "type": "safety",
+    "named": false
+  },
+  {
+    "type": "scena",
+    "named": false
+  },
+  {
+    "type": "signals",
+    "named": false
+  },
+  {
+    "type": "signature_hierarchy",
+    "named": false
+  },
+  {
+    "type": "stage",
+    "named": false
+  },
+  {
+    "type": "strategy",
+    "named": false
+  },
+  {
+    "type": "string_literal",
+    "named": true
+  },
+  {
+    "type": "temperament",
+    "named": false
+  },
+  {
+    "type": "test",
+    "named": false
+  },
+  {
+    "type": "timeout",
+    "named": false
+  },
+  {
+    "type": "tool",
+    "named": false
+  },
+  {
+    "type": "transformation_rules",
+    "named": false
+  },
+  {
+    "type": "transition",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "use",
+    "named": false
+  },
+  {
+    "type": "uses",
+    "named": false
+  },
+  {
+    "type": "using",
+    "named": false
+  },
+  {
+    "type": "visibility",
+    "named": false
+  },
+  {
+    "type": "wait",
+    "named": false
+  },
+  {
+    "type": "weighting_preferences",
+    "named": false
+  },
+  {
+    "type": "weights",
+    "named": false
+  },
+  {
+    "type": "when",
+    "named": false
+  },
+  {
+    "type": "with",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

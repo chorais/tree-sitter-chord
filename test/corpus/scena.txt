@@ -1,0 +1,141 @@
+================================================================================
+Scena: linear flow with stages
+================================================================================
+
+scena > LinearFlow@1.0.0 {
+  entry_stage: "Start"
+  stage Start {
+    invocation StepOne -> intrinsic.local
+    transition goto Complete
+  }
+  stage Complete {}
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (top_level_decl
+    (scena_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (scena_body
+        (map_entry
+          key: (reference_part
+            (identifier))
+          value: (value
+            (primitive_value
+              (string_literal))))
+        (scena_stage_decl
+          name: (identifier)
+          (scena_stage_body
+            (scena_stage_item
+              (scena_invocation_edge_stmt
+                name: (identifier)
+                target: (reference
+                  (reference_part
+                    (identifier))
+                  (reference_part
+                    (identifier)))))
+            (scena_stage_item
+              (scena_transition_stmt
+                target: (identifier)))))
+        (scena_stage_decl
+          name: (identifier)
+          (scena_stage_body))))))
+
+================================================================================
+Scena: stage qualifiers, governance and args
+================================================================================
+
+scena > Qualified@1.0 {
+  stage gather @policy(strict) > parallel timeout 30s continue {
+    persona researcher (topic: "agents", depth: 3)
+    with all {
+      persona debater
+    }
+    as tool {
+      persona writer
+    }
+    transition on_error fallback
+  }
+  stage fallback > barrier gate1 {
+    persona verifier
+  }
+  stage check > deterministic {
+    persona verifier
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (top_level_decl
+    (scena_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (scena_body
+        (scena_stage_decl
+          name: (identifier)
+          (scena_stage_governance
+            (identifier)
+            (identifier))
+          (scena_stage_qualifier
+            (scena_parallel_qualifier
+              (timeout_clause
+                (duration)
+                (timeout_mode))))
+          (scena_stage_body
+            (scena_stage_item
+              (scena_invocation_stmt
+                anchor: (scena_type_anchor)
+                target: (identifier)
+                (scena_invocation_args
+                  (scena_invocation_arg
+                    name: (reference_part
+                      (identifier))
+                    value: (value
+                      (primitive_value
+                        (string_literal))))
+                  (scena_invocation_arg
+                    name: (reference_part
+                      (identifier))
+                    value: (value
+                      (primitive_value
+                        (number_literal)))))))
+            (scena_stage_item
+              (scena_with_block
+                (scena_with_body
+                  (scena_invocation_stmt
+                    anchor: (scena_type_anchor)
+                    target: (identifier)))))
+            (scena_stage_item
+              (scena_as_block
+                (scena_type_anchor)
+                (scena_as_body
+                  (scena_invocation_stmt
+                    anchor: (scena_type_anchor)
+                    target: (identifier)))))
+            (scena_stage_item
+              (scena_transition_stmt
+                target: (identifier)))))
+        (scena_stage_decl
+          name: (identifier)
+          (scena_stage_qualifier
+            (scena_barrier_qualifier
+              (identifier)))
+          (scena_stage_body
+            (scena_stage_item
+              (scena_invocation_stmt
+                anchor: (scena_type_anchor)
+                target: (identifier)))))
+        (scena_stage_decl
+          name: (identifier)
+          (scena_stage_qualifier
+            (scena_deterministic_qualifier))
+          (scena_stage_body
+            (scena_stage_item
+              (scena_invocation_stmt
+                anchor: (scena_type_anchor)
+                target: (identifier)))))))))

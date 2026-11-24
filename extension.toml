@@ -1,0 +1,12 @@
+id = "chord"
+name = "Chord"
+version = "0.1.0"
+schema_version = 1
+authors = ["figurativelycthulhu"]
+description = "Syntax highlighting for Chord, the Chorais description language for AI orchestration"
+repository = "https://github.com/chorais/chorais"
+
+[grammars.chord]
+repository = "file:///Users/calum.shaw-mackay/dev/tree-sitter-chord"
+rev = "main"
+path = "."

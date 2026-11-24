@@ -1,0 +1,126 @@
+================================================================================
+Values: literals, lists, comments and heredoc
+================================================================================
+
+// Line comment
+# Hash comment
+capability Values@1.0 {
+  count: 42
+  price: -12.5e3
+  flag: true
+  missing: null
+  tags: ["a", "b"]
+  ref: other.thing
+  block: /* multi
+     line */ 1
+  script: <<EOF
+hello
+world
+EOF
+  use profile "default"
+  dotted.key { inner: 1 }
+  a -> b
+  fast cheap -> total
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line_comment)
+  (line_comment)
+  (top_level_decl
+    (capability_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (number_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (number_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (boolean_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (null_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (value_list
+            (value
+              (primitive_value
+                (string_literal)))
+            (value
+              (primitive_value
+                (string_literal))))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (reference_value
+            (reference
+              (reference_part
+                (identifier))
+              (reference_part
+                (identifier))))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        (block_comment)
+        value: (value
+          (primitive_value
+            (number_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (heredoc)))
+      (map_entry
+        key: (reference_part
+          (map_key))
+        ref: (reference
+          (reference_part
+            (map_key)))
+        value: (value
+          (primitive_value
+            (string_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        key: (reference_part
+          (identifier))
+        value: (value
+          (map_value
+            (map_entry
+              key: (reference_part
+                (identifier))
+              value: (value
+                (primitive_value
+                  (number_literal)))))))
+      (map_entry
+        from: (reference_part
+          (identifier))
+        to: (reference_part
+          (identifier)))
+      (map_entry
+        from: (reference_part
+          (identifier))
+        via: (reference_part
+          (identifier))
+        to: (reference_part
+          (identifier))))))

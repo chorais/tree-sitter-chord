@@ -1,0 +1,5 @@
+name = "Chord"
+grammar = "chord"
+path_suffixes = ["chord"]
+line_comments = ["// ", "# "]
+tab_size = 2

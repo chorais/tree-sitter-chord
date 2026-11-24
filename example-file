@@ -1,0 +1,48 @@
+scena > ResearchPipeline@1.0.0 {
+  entry_stage: "Gather"
+  description: "Research, debate, then synthesise"
+
+  stage Gather @policy(strict) > parallel timeout 30s continue {
+    invocation SearchDocs -> provider.local
+    persona Researcher (topic: "agents", depth: 3)
+    transition goto Debate
+  }
+
+  stage Debate > barrier consensus {
+    persona Skeptic
+    persona Advocate
+    transition on_error HumanReview
+  }
+
+  stage HumanReview > deterministic {
+    persona Supervisor
+  }
+}
+
+persona > Researcher@1.0 {
+  description: "Gathers and cites sources"
+  uses {
+    cognition Base@1.0
+  }
+  overrides {
+    override Base@1.0 {
+      config { governance { max_stages 30 } }
+    }
+  }
+}
+
+assembly Flow@1.0 {
+  inputs { topic: string }
+  nodes {
+    node gather using researcher {
+      args { query: "{{inputs.topic}}" }
+      emits { event.research_done { status: "ok" } }
+    }
+  }
+  graph {
+    gather -> debate
+  }
+  script: <<EOF
+echo "hello world"
+EOF
+}

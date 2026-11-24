@@ -1,0 +1,249 @@
+================================================================================
+Persona with uses and overrides
+================================================================================
+
+persona > Analyst@1.0 {
+  description: "Analyses data"
+  uses {
+    cognition Base@1.0
+    config Base@1.0
+  }
+  overrides {
+    override Base@1.0 {
+      config { governance { max_stages 30 } }
+    }
+  }
+  capabilities {
+    requires "risk-analysis"
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (top_level_decl
+    (persona_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (persona_body
+        (map_entry
+          key: (reference_part
+            (map_key))
+          value: (value
+            (primitive_value
+              (string_literal))))
+        (map_entry
+          key: (reference_part
+            (map_key))
+          value: (value
+            (map_value
+              (map_entry
+                key: (reference_part
+                  (map_key))
+                value: (value
+                  (name_with_version
+                    name: (identifier)
+                    version: (version))))
+              (map_entry
+                key: (reference_part
+                  (map_key))
+                value: (value
+                  (name_with_version
+                    name: (identifier)
+                    version: (version)))))))
+        (persona_overrides_field
+          (persona_overrides_block
+            (persona_override_entry
+              name: (name_with_version
+                name: (identifier)
+                version: (version))
+              (map_value
+                (map_entry
+                  key: (reference_part
+                    (map_key))
+                  value: (value
+                    (map_value
+                      (map_entry
+                        key: (reference_part
+                          (map_key))
+                        value: (value
+                          (map_value
+                            (map_entry
+                              key: (reference_part
+                                (identifier))
+                              value: (value
+                                (primitive_value
+                                  (number_literal))))))))))))))
+        (map_entry
+          key: (reference_part
+            (map_key))
+          value: (value
+            (map_value
+              (map_entry
+                key: (reference_part
+                  (map_key))
+                value: (value
+                  (primitive_value
+                    (string_literal)))))))))))
+
+================================================================================
+Chorus with uses and routing
+================================================================================
+
+chorus > Pipeline@1.0 {
+  routing { mode: "sequential" }
+  uses {
+    persona Worker@1.0 as worker
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (top_level_decl
+    (chorus_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (chorus_body
+        (map_entry
+          key: (reference_part
+            (map_key))
+          value: (value
+            (map_value
+              (map_entry
+                key: (reference_part
+                  (identifier))
+                value: (value
+                  (primitive_value
+                    (string_literal)))))))
+        (chorus_uses_field
+          (uses_block
+            (uses_entry
+              (name_with_version
+                name: (identifier)
+                version: (version))
+              alias: (identifier))))))))
+
+================================================================================
+Assembly with graph, nodes and dotted keys
+================================================================================
+
+assembly Flow@1.0 extends Base@1.0 {
+  inputs { topic: string }
+  nodes {
+    node gather using researcher {
+      args { query: "topic" }
+      emits { event.done { status: "ok" } }
+    }
+  }
+  graph {
+    gather -> debate
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (top_level_decl
+    (assembly_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (assembly_body
+        (map_entry
+          key: (reference_part
+            (map_key))
+          value: (value
+            (map_value
+              (map_entry
+                key: (reference_part
+                  (identifier))
+                value: (value
+                  (reference_value
+                    (reference
+                      (reference_part
+                        (identifier)))))))))
+        (assembly_nodes_field
+          (nodes_block
+            (node_decl
+              name: (identifier)
+              target: (identifier)
+              (node_body
+                (map_entry
+                  key: (reference_part
+                    (map_key))
+                  value: (value
+                    (map_value
+                      (map_entry
+                        key: (reference_part
+                          (identifier))
+                        value: (value
+                          (primitive_value
+                            (string_literal)))))))
+                (map_entry
+                  key: (reference_part
+                    (identifier))
+                  value: (value
+                    (map_value
+                      (map_entry
+                        key: (reference_part
+                          (identifier))
+                        key: (reference_part
+                          (identifier))
+                        value: (value
+                          (map_value
+                            (map_entry
+                              key: (reference_part
+                                (identifier))
+                              value: (value
+                                (primitive_value
+                                  (string_literal))))))))))))))
+        (assembly_graph_field
+          (graph_block
+            (map_entry
+              from: (reference_part
+                (identifier))
+              to: (reference_part
+                (identifier)))))))))
+
+================================================================================
+Capability, provider and test declarations
+================================================================================
+
+capability SimpleCapability@1.0.0 {
+  lane: "intrinsic.local"
+  operation: "simple_operation"
+  policy: "allow"
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (top_level_decl
+    (capability_decl
+      (name_with_version
+        name: (identifier)
+        version: (version))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (string_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (string_literal))))
+      (map_entry
+        key: (reference_part
+          (identifier))
+        value: (value
+          (primitive_value
+            (string_literal)))))))
