@@ -11,7 +11,6 @@ A [tree-sitter](https://tree-sitter.github.io/tree-sitter/) grammar for
 - Document outline, brackets & autoclose pairs, auto-indent
 - Markdown injections inside heredoc blocks
 - Text objects
-- File icons (via the bundled `Chord Icons` icon theme)
 - 24 code snippets
 
 ## Installing
@@ -47,7 +46,7 @@ Requires the tree-sitter CLI (≥ 0.24) and node.
 | `languages/chord/` | Zed extension queries (highlights, outline, brackets, indents, injections, textobjects) |
 | `queries/` | mirror of the above, used by the tree-sitter CLI |
 | `snippets/` | Zed snippets |
-| `icon_themes/`, `icons/` | file-icon theme |
+| `icons/` | icon assets (reserved for a future optional file-icon theme) |
 
 ## License
 
